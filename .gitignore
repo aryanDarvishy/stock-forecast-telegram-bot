@@ -3,4 +3,5 @@ logs.csv
 __pycache__/
 *.pyc
 .vscode/
+.vs/
 .idea/

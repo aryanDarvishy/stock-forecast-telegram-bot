@@ -23,6 +23,25 @@
 
 ---
 
+## 🔄 Pipeline проекта
+
+```text
+User Input
+    ↓
+Data Loading
+    ↓
+Feature Generation
+    ↓
+Model Training
+    ↓
+Model Evaluation
+    ↓
+Forecast Generation
+    ↓
+Trading Signals
+    ↓
+Telegram Response
+```
 ## 🧠 Используемые модели
 
 В проекте реализовано несколько подходов к прогнозированию временных рядов:
@@ -43,15 +62,9 @@
 
 ## 📊 Пример использования
 
-Пользователь отправляет боту сообщение:
-
-AAPL 1000
-
-
-где:
-
-- **AAPL** — тикер акции  
-- **1000** — сумма условной инвестиции
+![AVGO Forecast](images/gru_lb30.jpg)
+![AVGO Forecast](images/ridge_lag_10.jpg)
+![AVGO Forecast](images/ridge_lag_10(1).jpg)
 
 Бот возвращает:
 
@@ -64,29 +77,19 @@ AAPL 1000
 
 ## 🗂 Структура проекта
 
-stock-forecast-telegram-bot
-
+```text
+stock-forecast-telegram-bot/
 │
-
-├── main.py # Telegram бот
-
-├── logic.py # основной pipeline проекта
-
-├── models.py # модели прогнозирования
-
-├── metrics.py # метрики RMSE / MAPE
-
-├── data.py # загрузка данных Yahoo Finance
-
-├── visualization.py # построение графика
-
-├── test_logic.py # тесты логики
-
-├── requirements.txt # зависимости проекта
-
-├── logs.csv # лог запросов
-
+├── main.py               # Telegram bot entry point
+├── logic.py              # Main forecasting pipeline
+├── models.py             # Forecasting models
+├── metrics.py            # RMSE / MAPE metrics
+├── data.py               # Yahoo Finance data loading
+├── visualization.py      # Forecast plotting
+├── test_logic.py         # Unit tests
+├── requirements.txt
 └── .gitignore
+```
 
 
 ---
@@ -165,6 +168,16 @@ logs.csv
 - TensorFlow / Keras  
 - yfinance  
 - matplotlib  
+
+---
+
+## 🚧 Future Improvements
+
+- Add LSTM-based forecasting
+- Add real-time streaming
+- Deploy bot to cloud server
+- Add portfolio optimization
+- Improve trading strategy logic
 
 ---
 
